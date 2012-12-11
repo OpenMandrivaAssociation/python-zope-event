@@ -47,3 +47,10 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %defattr(-,root,root)
 %doc *.txt
 %py_sitedir/zope*
+
+
+%changelog
+* Wed Jun 20 2012 Lev Givon <lev@mandriva.org> 4.0.0-1
++ Revision: 806505
+- imported package python-zope-event
+
