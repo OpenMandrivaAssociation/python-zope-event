@@ -1,2 +1,4 @@
+removed_sources:
+  zope.event-4.0.0.tar.gz: c0686262888b60c423d9c02f671746b2b06ce18e
 sources:
-  "zope.event-4.0.0.tar.gz": c0686262888b60c423d9c02f671746b2b06ce18e
+  zope.event-4.0.3.tar.gz: 5a3f90d5fb4cbfc89e2f64bad05f28c71271e3a3
