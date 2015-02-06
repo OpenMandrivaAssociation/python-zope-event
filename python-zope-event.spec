@@ -8,7 +8,7 @@ Summary:	Very basic event publishing system for Python
 
 Name:		python-zope-event
 Version:	4.0.3
-Release:	1
+Release:	2
 Source0:	http://pypi.python.org/packages/source/z/zope.event/zope.event-%{version}.tar.gz
 License:	ZPL
 Group:		Development/Python
