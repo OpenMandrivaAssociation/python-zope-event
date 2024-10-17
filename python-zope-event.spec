@@ -12,7 +12,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/4c/b2/51c0369adcf5be2334280eed230192ab3b03f81f8efda9ddea6f65cc7b32/zope.event-4.4.tar.gz
 License:	ZPL
 Group:		Development/Python
-Url:		http://pypi.python.org/pypi/zope.event/
+Url:		https://pypi.python.org/pypi/zope.event/
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 
