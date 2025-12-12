@@ -1,20 +1,21 @@
-%define	tarname zope.event
-%define	rel	1
-%if %mdkversion < 201100
-%else
-%endif
-
-Summary:	Very basic event publishing system for Python
+%define	pypi_name zope_event
 
 Name:		python-zope-event
-Version:	4.4
+Summary:	Very basic event publishing system for Python
+Version:	6.1
 Release:	1
-Source0:	https://files.pythonhosted.org/packages/4c/b2/51c0369adcf5be2334280eed230192ab3b03f81f8efda9ddea6f65cc7b32/zope.event-4.4.tar.gz
-License:	ZPL
+Source0:	https://files.pythonhosted.org/packages/source/z/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+License:	ZPL-2.1
 Group:		Development/Python
-Url:		https://pypi.python.org/pypi/zope.event/
+URL:		https://pypi.python.org/pypi/zope.event/
+BuildSystem:  python
 BuildArch:	noarch
-BuildRequires:	python-setuptools
+
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+
 
 %description
 The zope.event package provides a simple event system, including:
@@ -27,19 +28,13 @@ The zope.event package provides a simple event system, including:
   zope.component.
 
 %prep
-%setup -q -n %{tarname}-%{version}
+%autosetup -n %{pypi_name}-%{version} -p1
 
-%build
-%__python setup.py build
-
-%install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-
-%clean
+# Remove bundled egg-info
+rm -rf src/zope.event.egg-info
 
 %files
-%doc *.txt
-%{py_puresitedir}/zope*
-
-
-
+%doc README.rst
+%license LICENSE.txt COPYRIGHT.txt
+%{python_sitelib}/zope
+%{python_sitelib}/%{pypi_name}-%{version}.dist-info
