@@ -3,7 +3,7 @@
 Name:		python-zope-event
 Summary:	Very basic event publishing system for Python
 Version:	6.2
-Release:	1
+Release:	2
 License:	ZPL-2.1
 Group:		Development/Python
 URL:		https://pypi.python.org/pypi/zope.event/
